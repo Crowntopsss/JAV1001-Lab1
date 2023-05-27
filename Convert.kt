@@ -4,6 +4,8 @@ fun main() {
     val inputer = Scanner(System.`in`)
 
     println("Please enter the value you want to convert:")
+
+    println("Please enter the value you want to convert:")
     val input = inputer.nextDouble()
 
     println("Please enter the current unit of value you just input:")
@@ -13,10 +15,14 @@ fun main() {
     val convetionUnit = inputer.next()
 
     val answer = makeConversion(input, valueUnit, convetionUnit)
-    println("This is the result: $answer")
+    if (result != null) {
+         println("This is the result: $answer")
+    } else {
+        println("Conversion metric not found for the given units.")
+    }
 }
 
-fun makeConversion(input: Double, valueUnit: String, convetionUnit: String): Double {
+fun makeConversion(input: Double, valueUnit: String, convetionUnit: String): Double? {
     return when (valueUnit.toLowerCase() to convetionUnit.toLowerCase()) {
         "km" to "mi" -> input * 0.62
         "mi" to "km" -> input * 1.61
