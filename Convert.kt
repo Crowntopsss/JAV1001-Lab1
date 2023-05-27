@@ -15,7 +15,7 @@ fun main() {
     in to cm
     kg to lb
     lb to kg
-    70""")
+    """)
 
     println("Please enter the value you want to convert:")
     val input = inputer.nextDouble()
