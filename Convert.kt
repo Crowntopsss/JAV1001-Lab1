@@ -3,6 +3,16 @@ import java.util.*
 fun main() {
     val inputer = Scanner(System.`in`)
 
+    println(""""
+    Here are the list of conversion you can do
+    km to mi
+    mi to km
+    cm to km
+    in to cm
+    kg to lb
+    lb to kg
+    70""")
+
     println("Please enter the value you want to convert:")
     val input = inputer.nextDouble()
 
