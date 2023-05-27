@@ -12,11 +12,11 @@ fun main() {
     println("Please enter the unit of measurement to convert to the value to:")
     val convetionUnit = inputer.next()
 
-    val answer = convertValue(input, valueUnit, convetionUnit)
+    val answer = makeConversion(input, valueUnit, convetionUnit)
     println("This is the result: $answer")
 }
 
-fun convertValue(input: Double, valueUnit: String, convetionUnit: String): Double {
+fun makeConversion(input: Double, valueUnit: String, convetionUnit: String): Double {
     return when (valueUnit.toLowerCase() to convetionUnit.toLowerCase()) {
         "km" to "mi" -> input * 0.62
         "mi" to "km" -> input * 1.61
