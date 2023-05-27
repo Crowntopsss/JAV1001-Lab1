@@ -1,3 +1,7 @@
+// Temitope Adebiyi
+// A00277043
+// A simple function to convert between different forms of measurements
+
 import java.util.*
 
 fun main() {
@@ -22,7 +26,9 @@ fun main() {
     println("Please enter the unit of measurement to convert to the value to:")
     val convetionUnit = inputer.next()
 
+    // the function for the conversion is called below
     val answer = makeConversion(input, valueUnit, convetionUnit)
+    // A check is done here to see if the answer is null
     if (answer != null) {
          println("This is the result: $answer")
     } else {
