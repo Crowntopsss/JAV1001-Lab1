@@ -4,8 +4,6 @@ fun main() {
     val inputer = Scanner(System.`in`)
 
     println("Please enter the value you want to convert:")
-
-    println("Please enter the value you want to convert:")
     val input = inputer.nextDouble()
 
     println("Please enter the current unit of value you just input:")
@@ -15,7 +13,7 @@ fun main() {
     val convetionUnit = inputer.next()
 
     val answer = makeConversion(input, valueUnit, convetionUnit)
-    if (result != null) {
+    if (answer != null) {
          println("This is the result: $answer")
     } else {
         println("Conversion metric not found for the given units.")
@@ -30,6 +28,6 @@ fun makeConversion(input: Double, valueUnit: String, convetionUnit: String): Dou
         "in" to "cm" -> input * 2.54
         "kg" to "lb" -> input * 2.2
         "lb" to "kg" -> input * 0.4
-        else -> input 
+        else -> null 
     }
 }
